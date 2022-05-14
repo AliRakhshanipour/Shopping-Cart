@@ -1,60 +1,5 @@
 const $ = document;
 const conLog = console.log.bind(console); // easy debugging
-//set src of images and fonts
-const itemSource = {
-  images: {
-    nameObj: "images",
-    srcObj: {
-      sources: [
-        {
-          name: "iPhone 11 pro max",
-          src: "Images/iphone 11 pro max.jpeg",
-          price: 320,
-        },
-        {
-          name: "iPhone 11 Pro",
-          src: "Images/iphone 11 pro.jpeg",
-          price: 298,
-        },
-        { name: "iPhone 11", src: "Images/iphone 11.jpeg", price: 250 },
-        {
-          name: "iPhone 12 Pro Max",
-          src: "Images/iphone 12 pro max.jpeg",
-          price: 520,
-        },
-        {
-          name: "iPhone 12 Pro",
-          src: "Images/iphone 12 pro.jpeg",
-          price: 490,
-        },
-        { name: "iPhone 12", src: "Images/iphone 12.jpeg", price: 439 },
-        {
-          name: "iPhone 13 Mini",
-          src: "Images/iphone 13 mini.webp",
-          price: 620,
-        },
-        {
-          name: "iPhone 13 Pro Max",
-          src: "Images/iphone 13 pro max.jpeg",
-          price: 800,
-        },
-        {
-          name: "iPhone 13 Pro",
-          src: "Images/iphone 13 pro.jpeg",
-          price: 780,
-        },
-        { name: "iPhone 13", src: "Images/iphone 13.png", price: 690 },
-      ],
-    },
-  },
-  fonts: {
-    nameObj: "fonts",
-    srcObj: [
-      "../Fonts/Booter - Zero Zero.woff",
-      "../Fonts/Booter - Zero Zero.woff2",
-    ],
-  },
-};
 
 //set cart for customer
 let shoppingCart = Array();
@@ -63,6 +8,7 @@ let shoppingCart = Array();
 const purchaseBtn = $.getElementById("purchase");
 const shopItems = $.querySelector(".shop-items");
 const cartItems = $.querySelector(".cart-items");
+const totalPrice = $.querySelector(".cart-total-price");
 
 //get items from dataBase
 itemSource.images.srcObj.sources.forEach((item) => {
